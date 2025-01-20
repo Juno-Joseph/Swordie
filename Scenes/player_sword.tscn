@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfm7em17p803n"]
+
+[ext_resource type="Texture2D" uid="uid://bpt4cxmlpjin6" path="res://Assets/Broken Sword.png" id="1_utp7y"]
+[ext_resource type="Script" path="res://Scripts/player_sword.gd" id="1_veekk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tjifc"]
+size = Vector2(7, 16)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_veekk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_utp7y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -2)
+shape = SubResource("RectangleShape2D_tjifc")
