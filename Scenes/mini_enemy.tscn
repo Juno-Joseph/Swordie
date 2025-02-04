@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://Scripts/my_hurt_box.gd" id="3_ht4g3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7i4yr"]
-size = Vector2(15, 19)
+size = Vector2(15, 18.5)
 
 [sub_resource type="Animation" id="Animation_y3i7c"]
 length = 0.001
@@ -56,10 +56,14 @@ hframes = 5
 script = ExtResource("3_ht4g3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/MyHurtBox"]
-position = Vector2(-2, 0)
+position = Vector2(-2, -0.25)
 shape = SubResource("RectangleShape2D_7i4yr")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_yxlc3")
 }
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -0.25)
+shape = SubResource("RectangleShape2D_7i4yr")
